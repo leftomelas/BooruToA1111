@@ -1,15 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.IO;
-using System.Diagnostics;
-using Microsoft.VisualBasic.FileIO;
+﻿
 
 namespace BooruToA1111
 {
@@ -22,7 +11,8 @@ namespace BooruToA1111
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (!Directory.Exists(tbxSrc.Text) || !Directory.Exists(tbxDest.Text))
+#if DEBUG
+if (!Directory.Exists(tbxSrc.Text) || !Directory.Exists(tbxDest.Text))
             {
                 MessageBox.Show("ディレクトリが見つかりません", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -75,6 +65,9 @@ namespace BooruToA1111
                 }
                 label3.Visible = false;
             }
+#else
+            MessageBox.Show("この機能はご利用になれません。", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+#endif
         }
 
         private void FormStats_Load(object sender, EventArgs e)

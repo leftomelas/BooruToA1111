@@ -41,6 +41,8 @@
             button2 = new Button();
             button3 = new Button();
             checkBox1 = new CheckBox();
+            button4 = new Button();
+            label4 = new Label();
             SuspendLayout();
             // 
             // tbxBooruTags
@@ -115,7 +117,7 @@
             // 
             tbxTargetDir.Location = new Point(30, 522);
             tbxTargetDir.Name = "tbxTargetDir";
-            tbxTargetDir.Size = new Size(536, 31);
+            tbxTargetDir.Size = new Size(656, 31);
             tbxTargetDir.TabIndex = 5;
             // 
             // button1
@@ -170,11 +172,32 @@
             checkBox1.Text = "artistとmetaを削除";
             checkBox1.UseVisualStyleBackColor = true;
             // 
+            // button4
+            // 
+            button4.Location = new Point(479, 562);
+            button4.Name = "button4";
+            button4.Size = new Size(207, 43);
+            button4.TabIndex = 11;
+            button4.Text = "WD1.3方式に変換";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(479, 608);
+            label4.Name = "label4";
+            label4.Size = new Size(326, 25);
+            label4.TabIndex = 12;
+            label4.Text = "スペースを「, 」、アンダースコアをスペースにする";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(144F, 144F);
             AutoScaleMode = AutoScaleMode.Dpi;
             ClientSize = new Size(1195, 694);
+            Controls.Add(label4);
+            Controls.Add(button4);
             Controls.Add(checkBox1);
             Controls.Add(button3);
             Controls.Add(button2);
@@ -193,6 +216,7 @@
             MinimizeBox = false;
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -212,5 +236,7 @@
         private Button button2;
         private Button button3;
         private CheckBox checkBox1;
+        private Button button4;
+        private Label label4;
     }
 }

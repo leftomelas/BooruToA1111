@@ -34,6 +34,7 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
+            label4 = new Label();
             SuspendLayout();
             // 
             // button2
@@ -88,11 +89,21 @@
             label3.TabIndex = 6;
             label3.Text = "処理中...";
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(60, 9);
+            label4.Name = "label4";
+            label4.Size = new Size(805, 25);
+            label4.TabIndex = 7;
+            label4.Text = "ソースディレクトリにある画像を\"出力先/images/\"に、キャプション(txt)を\"出力先/captions/\"に分別する";
+            // 
             // FormStats
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(931, 327);
+            Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -115,5 +126,6 @@
         private Label label1;
         private Label label2;
         private Label label3;
+        private Label label4;
     }
 }
