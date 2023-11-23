@@ -59,23 +59,5 @@ namespace BooruToA1111.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   incredibly_absurdres
-        ///absurdres
-        ///highres
-        ///lowres
-        ///commentary_request
-        ///english_commentary
-        ///chinese_commentary
-        ///commentary
-        ///symbol-only_commentary
-        ///japanese_commentary に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string removal_list {
-            get {
-                return ResourceManager.GetString("removal-list", resourceCulture);
-            }
-        }
     }
 }

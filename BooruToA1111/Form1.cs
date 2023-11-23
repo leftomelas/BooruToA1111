@@ -22,7 +22,19 @@ namespace BooruToA1111
                 return;
             }
 
-            string removal = Properties.Resources.removal_list;
+            //Properties.Resources.removal_list
+            string removal = string.Empty;
+            if (File.Exists(".\\removal-list.txt"))
+            {
+                removal = File.ReadAllText(".\\removal-list.txt");
+            }
+            else
+            {
+                MessageBox.Show("タグリストファイルが見つかりません。", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+
             removal = removal.Replace("\r\n", "\n");
 
             string[] tags = removal.Split(char.Parse("\n"));
